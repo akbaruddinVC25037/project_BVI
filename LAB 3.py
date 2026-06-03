@@ -4,7 +4,7 @@ while (count < 10):
  print("this is loop",count)'''
 
 
-count = 0
+count = 1
 say = ""
 txt = ""
 print("If you want to stop, type 's' and 'S'")
