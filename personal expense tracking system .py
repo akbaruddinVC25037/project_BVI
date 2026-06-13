@@ -456,7 +456,12 @@ def dashboard():
 
         # MASUKKAN KE TABLE
         for row in data:
-            tree.insert("", "end", values=parse_row(row))
+         tree.insert(
+            "",
+            "end",
+            values=parse_row(row),
+            tags=(row[3],)
+        )
 
         total()
         finance_status()
@@ -584,8 +589,8 @@ def dashboard():
                 if values[0] == "TOTAL":
                     continue
 
-                # AMOUNT = index 4
-                raw = str(values[4]).replace("RM", "").replace(",", "").strip()
+                # AMOUNT = index 3
+                raw = str(values[3]).replace("RM", "").replace(",", "").strip()
 
                 if raw != "":
                     spent += float(raw)
@@ -667,7 +672,12 @@ def dashboard():
 
         # DISPLAY DATA (remove username only)
         for r in data:
-            tree.insert("", "end", values=parse_row(r))
+            tree.insert(
+                "",
+                "end",
+                values=parse_row(r),
+                tags=(r[3],)
+            )
 
         # TOTAL ROW
         tree.insert(
@@ -709,7 +719,12 @@ def dashboard():
             pass
 
         for r in data:
-            tree.insert("", "end", values=parse_row(r))
+         tree.insert(
+            "",
+            "end",
+            values=parse_row(r),
+            tags=(r[3],)
+        )
 
         # reset filter
         search.set("")
@@ -1374,6 +1389,16 @@ def dashboard():
     tree.tag_configure("Health", background="#fce7f3")
     tree.tag_configure("Utilities", background="#e0f2fe")
     tree.tag_configure("Other", background="#f3f4f6")
+
+    '''tree.tag_configure("Food", background="#90EE90")
+    tree.tag_configure("Transport", background="#87CEEB")
+    tree.tag_configure("Bills", background="#FFB6B6")
+    tree.tag_configure("Shopping", background="#FFE599")
+    tree.tag_configure("Entertainment", background="#D8BFD8")
+    tree.tag_configure("Health", background="#FF5AE6")
+    tree.tag_configure("Utilities", background="#B0E0E6")
+    tree.tag_configure("Other", background="#D3D3D3")'''
+
 
     # COLUMN SETTINGS
     for c in tree["columns"]:
