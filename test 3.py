@@ -12,7 +12,7 @@ FILE = "data.csv"
 USER_FILE = "users.csv"
 
 root = tk.Tk()
-root.title("ZAI FINANCE SYSTEM")
+root.title("ZAI SYSTEM")
 root.geometry("1250x750")
 root.configure(bg="#0b1220")
 
