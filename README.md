@@ -2,7 +2,15 @@ MUHAMMAD ISKANDAR DANIAL BIN ALI (VC25045)
 MUHAMMAD ZAKI BIN ZULKIFLY (VC25046)
 AKBARUDDIN BIN AHMAD @ MOHD DIN (VC25037)
 
-## PENERANGAN BAHASA MALAYSIA MULA BARIS **166**
+**PYTHON**
+## DOWNLOAD PROMPT IN COMMAND PYTHON
+* PIP INSTALL Tkinter      Builds the Graphical **User Interface (GUI)** of the application
+* PIP INSTALL tkcalendar   Provides a **calendar** widget for date selection
+* PIP INSTALL matplotlib   Generates **charts and graphs** for expense analysis
+* PIP INSTALL reportlab    Creates and exports reports in **PDF format**
+* PIP INSTALL openpyxl     Creates, edits, and manages **Excel reports** (.xlsx)
+
+## PENERANGAN BAHASA MALAYSIA MULA BARIS **174**
 
 # =======================================================**ENGLISH**==============================================================
 

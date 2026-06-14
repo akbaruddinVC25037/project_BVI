@@ -13,12 +13,13 @@ from openpyxl.utils import get_column_letter
 
 FILE = None
 USER_FILE = "users.csv"
-
+#==================TITLE ========================================================================================================
 root = tk.Tk()
 root.title("Zaki,akbar,iskandar: PERSONAL EXPENSE TRACKING SYSTEM")
 root.state("zoomed")
 root.configure(bg="#0b1220")
 
+#==============ANIMATION LOGIN==================================================================================================
 root.attributes("-alpha", 0)
 
 def fade_in():
@@ -39,7 +40,7 @@ def get_user_file():
 
 
 
-# ================= USER =================
+# ================= USER =======================================================================================================
 def save_user(u, p):
     with open(USER_FILE, "a", newline="") as f:
         csv.writer(f).writerow([u, p, "user"])
@@ -61,7 +62,7 @@ def check_login(u, p):
             return True, r[2]   # role
     return False, None
 
-# ================= SWITCH =================
+# ================= SWITCH =====================================================================================================
 def show_register():
     login_card.pack_forget()
     register_card.pack(expand=True)
@@ -70,7 +71,7 @@ def back_login():
     register_card.pack_forget()
     login_card.pack(expand=True)
 
-# ================= REGISTER =================
+# ================= REGISTER ====================================================================================================
 def register():
     u = reg_user.get()
     p = reg_pass.get()
@@ -95,7 +96,7 @@ def register():
     messagebox.showinfo("Success", "Account created!")
     back_login()
 
-# ================= LOGIN =================
+# ================= LOGIN ======================================================================================================
 def login():
 
     global logged_user, logged_pass
@@ -123,7 +124,7 @@ def login():
             "Wrong username or password"
         )
 
-# ================= LOGIN UI =================
+# ================= LOGIN UI ===================================================================================================
 login_frame = tk.Frame(root, bg="#0b1220")
 login_frame.pack(expand=True, fill="both")
 
@@ -198,7 +199,7 @@ tk.Button(login_card, text="CREATE NEW ACCOUNT",
           bg="#3b82f6", fg="white",
           width=25, command=show_register).pack()
 
-# ================= REGISTER UI (FIXED UX) =================
+# ================= REGISTER UI (FIXED UX) =====================================================================================
 register_card = tk.Frame(login_frame, bg="#111b2e", padx=40, pady=30)
 
 tk.Label(register_card,
@@ -283,14 +284,14 @@ tk.Button(btns, text="BACK",
 
 register_card.pack_forget()
 
-# ================= VALIDATION (NUMBERS ONLY) =================
+# ================= VALIDATION (NUMBERS ONLY) =====================================================================================
 
 def only_number(char):
     return char.isdigit() or char == ""
 
 validate_cmd = root.register(only_number)
 
-# ================= DASHBOARD =================
+# =========================================================== DASHBOARD =========================================================
 def dashboard():
 
     global tree, total_label, backup_data
@@ -1248,7 +1249,7 @@ def dashboard():
     date = DateEntry(form,date_pattern="yyyy-mm-dd",state="readonly")
     date.pack(fill="x")
 
-    # 🔥 block typing sahaja (TIDAK ganggu calendar)
+    
     def block_typing(event):
         if event.keysym not in ("Down", "Up", "Return"):
             return "break"
@@ -1292,7 +1293,7 @@ def dashboard():
         topbar,
         textvariable=search_cat,
         values=["Select Category","Food","Transport","Bills","Shopping","Utilities","Entertainment","Health","Other"],
-        state="readonly"   # 🔥 INI YANG KUNCI
+        state="readonly"   
     )
 
     search_cat_box.pack(side="left", padx=5)
@@ -1350,12 +1351,12 @@ def dashboard():
                         show="headings")
     style = ttk.Style()
 
-    style.theme_use("winnative")  # penting supaya warna boleh berubah
+    style.theme_use("winnative")  
 
     style.configure(
         "Treeview.Heading",
-        background="#3700FF",   #nak ubah warna table date,day,category....
-        foreground="white",     # tulisan putih
+        background="#3700FF",   
+        foreground="white",    
         font=("Arial", 10, "bold")
     )
     tree.pack(fill="both", expand=True)
