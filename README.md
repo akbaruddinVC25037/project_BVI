@@ -175,9 +175,9 @@ Apabila aplikasi dimulakan, pengguna akan melihat halaman login. Pengguna perlu 
 
 Semasa pendaftaran, pengguna perlu memasukkan username dan password. Sistem akan menyemak:
 
-Username **tidak boleh melebihi 15 aksara**
-Password mesti terdiri daripada nombor sahaja dan **maksimum 6 digit**
-Username tidak boleh sama dengan pengguna lain
+* Username **tidak boleh melebihi 15 aksara**
+* Password mesti terdiri daripada nombor sahaja dan **maksimum 6 digit**
+* Username tidak boleh sama dengan pengguna lain
 
 Semua maklumat pengguna akan disimpan dalam fail **users.csv**. Selepas berjaya log masuk, sistem akan menetapkan pengguna sebagai **logged_user** dan membuka dashboard utama. Setiap pengguna akan mempunyai fail CSV sendiri untuk menyimpan data perbelanjaan.
 
@@ -191,29 +191,29 @@ Panel kiri digunakan untuk memasukkan data perbelanjaan dan melihat status kewan
 
 Pengguna perlu memasukkan:
 
-Gaji bulanan (salary)
-Kategori perbelanjaan (contoh: Food, Transport, Bills, Shopping)
-Tarikh menggunakan calendar
-Jumlah perbelanjaan (RM dan sen)
-Penerangan atau nota perbelanjaan
+* Gaji bulanan (salary)
+* Kategori perbelanjaan (contoh: Food, Transport, Bills, Shopping)
+* Tarikh menggunakan calendar
+* Jumlah perbelanjaan (RM dan sen)
+* Penerangan atau nota perbelanjaan
 
 Selepas data dimasukkan, pengguna boleh menekan butang **ADD** untuk menyimpan data ke dalam sistem.
 
 Selain itu, terdapat juga:
 
-Butang **UNDO** untuk membatalkan tindakan terakhir
-Butang **CLEAR** untuk memadam semua data
-Paparan status kewangan yang menunjukkan keadaan kewangan pengguna seperti **“HEALTHY”**, **“HIGH SPENDING”** atau **“OVERSPENDING”** berdasarkan perbandingan gaji dan jumlah perbelanjaan
+* Butang **UNDO** untuk membatalkan tindakan terakhir
+* Butang **CLEAR** untuk memadam semua data
+* Paparan status kewangan yang menunjukkan keadaan kewangan pengguna seperti **“HEALTHY”**, **“HIGH SPENDING”** atau **“OVERSPENDING”** berdasarkan perbandingan gaji dan jumlah perbelanjaan
 
 ## 4. PANEL KANAN (JADUAL & ANALISIS)
 
 Panel kanan memaparkan semua data perbelanjaan dalam bentuk jadual (Treeview). Jadual ini mengandungi:
 
-Tarikh
-Hari
-Kategori
-Jumlah
-Penerangan
+* Tarikh
+* Hari
+* Kategori
+* Jumlah
+* Penerangan
 
 Data akan disusun mengikut tarikh secara automatik untuk memudahkan pengguna melihat urutan perbelanjaan.
 
@@ -221,9 +221,9 @@ Data akan disusun mengikut tarikh secara automatik untuk memudahkan pengguna mel
 
 Sistem menyediakan fungsi carian untuk menapis data berdasarkan:
 
-Kata kunci (keyword)
-Kategori
-Tarikh (optional filter menggunakan calendar)
+* Kata kunci (keyword)
+* Kategori
+* Tarikh (optional filter menggunakan calendar)
 
 Pengguna juga boleh menekan butang **“VIEW ALL”** untuk memaparkan semua data semula tanpa penapis.
 
@@ -245,11 +245,11 @@ Sistem juga menyediakan fungsi grafik menggunakan matplotlib. Data perbelanjaan 
 
 Sistem boleh menghasilkan laporan dalam bentuk **PDF** menggunakan ReportLab. Laporan ini mengandungi:
 
-Tajuk laporan
-Nama pengguna
-Tarikh penjanaan laporan
-Jadual perbelanjaan
-Jumlah keseluruhan perbelanjaan
+* Tajuk laporan
+* Nama pengguna
+* Tarikh penjanaan laporan
+* Jadual perbelanjaan
+* Jumlah keseluruhan perbelanjaan
 
 Jika data terlalu banyak, sistem akan automatik membuat halaman baru.
 
@@ -257,11 +257,11 @@ Jika data terlalu banyak, sistem akan automatik membuat halaman baru.
 
 Selain PDF, sistem juga boleh menjana laporan **Excel** menggunakan openpyxl. Fail Excel ini mengandungi:
 
-Tajuk laporan 
-Header jadual
-Data perbelanjaan
-Format selang-seli 
-Jumlah keseluruhan (TOTAL SPENDING)
+* Tajuk laporan 
+* Header jadual
+* Data perbelanjaan
+* Format selang-seli 
+* Jumlah keseluruhan (TOTAL SPENDING)
 
 Fail ini disimpan sebagai:
 **username_report.xlsx**
@@ -270,22 +270,22 @@ Fail ini disimpan sebagai:
 
 Sistem juga menyediakan beberapa fungsi tambahan seperti:
 
-**Undo** untuk kembali ke data sebelumnya
-**Delete** untuk memadam data terpilih
-**Clear** untuk memadam semua data
-**Auto save** ke dalam CSV
-**Backup data** sementara sebelum perubahan dibuat
+* **Undo** untuk kembali ke data sebelumnya
+* **Delete** untuk memadam data terpilih
+* **Clear** untuk memadam semua data
+* **Auto save** ke dalam CSV
+* **Backup data** sementara sebelum perubahan dibuat
 
 ## 11. STRUKTUR PENYIMPANAN DATA
 
 Semua data disimpan dalam format CSV dengan struktur berikut:
 
-Username
-Tarikh
-Hari
-Kategori
-Jumlah
-Penerangan
+* Username
+* Tarikh
+* Hari
+* Kategori
+* Jumlah
+* Penerangan
 
 Setiap pengguna mempunyai fail berasingan untuk memastikan data tidak bercampur.
 
