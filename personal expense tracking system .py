@@ -1382,23 +1382,23 @@ def dashboard():
         borderwidth=1
     )
 
-    tree.tag_configure("Food", background="#edf5ec")
+    '''tree.tag_configure("Food", background="#edf5ec")
     tree.tag_configure("Transport", background="#dbeafe")
     tree.tag_configure("Bills", background="#fee2e2")
     tree.tag_configure("Shopping", background="#fef3c7")
     tree.tag_configure("Entertainment", background="#ede9fe")
     tree.tag_configure("Health", background="#fce7f3")
     tree.tag_configure("Utilities", background="#e0f2fe")
-    tree.tag_configure("Other", background="#f3f4f6")
+    tree.tag_configure("Other", background="#f3f4f6")'''
 
-    '''tree.tag_configure("Food", background="#90EE90")
+    tree.tag_configure("Food", background="#90EE90")
     tree.tag_configure("Transport", background="#87CEEB")
     tree.tag_configure("Bills", background="#FFB6B6")
     tree.tag_configure("Shopping", background="#FFE599")
     tree.tag_configure("Entertainment", background="#D8BFD8")
     tree.tag_configure("Health", background="#FF5AE6")
     tree.tag_configure("Utilities", background="#B0E0E6")
-    tree.tag_configure("Other", background="#D3D3D3")'''
+    tree.tag_configure("Other", background="#D3D3D3")
 
 
     # COLUMN SETTINGS
