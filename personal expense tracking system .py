@@ -15,7 +15,7 @@ FILE = None
 USER_FILE = "users.csv"
 #==================TITLE ========================================================================================================
 root = tk.Tk()
-root.title("Zaki,akbar,iskandar: PERSONAL EXPENSE TRACKING SYSTEM")
+root.title("PERSONAL EXPENSE TRACKING SYSTEM")
 root.state("zoomed")
 root.configure(bg="#0b1220")
 
